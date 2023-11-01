@@ -1,0 +1,17 @@
+.quick-links-container {
+
+    .custom-card {
+        height: 500px;
+        width: 100%;
+    }
+
+    .btn-list {
+        .btn {
+            text-align: left;
+            display: block;
+            width: 100%;
+            margin-top: 1.2rem !important;
+            background-image: var(--bs-gradient) !important;
+        }
+    }
+}

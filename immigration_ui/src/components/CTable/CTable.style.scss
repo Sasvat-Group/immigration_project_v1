@@ -1,0 +1,43 @@
+.case-specific-basic-card {
+
+    flex: 1;
+    max-width: 27%;
+    // padding-right: 0 !important;
+
+    .task-list {
+
+        padding-top: 10px;
+
+        li {
+            margin-bottom: 1rem;
+            padding: 0;
+            font-size: .75rem;
+        }
+    }
+
+}
+
+.case-specific-milestone-card {
+    flex: 1;
+    max-width: 73% !important;
+    border-left: 1px solid #ededed;
+
+    .milestone-card {
+        padding-top: 0;
+    }
+}
+
+.case-specific-milestone-card,
+.case-specific-basic-card {
+
+
+    .card-body {
+        padding: 1rem;
+        padding-left: 0;
+    }
+
+    .case-specific-overview {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

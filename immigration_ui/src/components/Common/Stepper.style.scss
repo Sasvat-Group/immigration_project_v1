@@ -1,0 +1,167 @@
+.box-container {
+    display: flex;
+
+    .step-box {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        &.alternate {
+            flex-direction: column-reverse;
+            justify-content: center;
+
+            .step-badge-box {
+                padding-top: 0;
+            }
+
+            .step-badge.alternate {
+                margin-top: 0;
+            }
+
+            .step-down-box {
+                // height: 250px;
+                margin-top: 1.5rem;
+                align-items: flex-end;
+            }
+        }
+
+        .step-down-box {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: flex-start;
+            height: 130px;
+            padding: .5rem;
+            padding-bottom: 0;
+
+            .down-arrow {
+                position: absolute;
+                display: none;
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 10px solid #ddd;
+            }
+
+            .up-arrow {
+                position: absolute;
+                display: none;
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid #ddd;
+            }
+        }
+
+        ul.card-body-list {
+            position: absolute;
+            display: none;
+            padding: 0.5rem;
+            font-size: 12px;
+            overflow-y: auto;
+            border-radius: 0.375rem;
+            background-color: var(--primary01);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, .05);
+
+            li:last-child {
+                border-bottom: none;
+            }
+
+            li {
+                border-bottom: 1px solid #eee;
+            }
+        }
+
+        .step-badge-box {
+            padding: .5rem;
+            padding-bottom: 0;
+
+            .step-badge {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                // height: 250px;
+                margin: 1rem 0;
+                margin-bottom: 0;
+
+                &.alternate {
+                    flex-direction: column-reverse;
+                    justify-content: flex-start;
+                    height: 130px !important;
+                }
+
+                .circle {
+                    display: flex;
+                    color: #fff;
+                    font-size: 1rem;
+                    justify-content: center;
+                    align-items: center;
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 100%;
+                }
+
+                .vertical-line {
+                    height: 100px;
+                    border-width: 4px;
+                    border-style: solid;
+                }
+            }
+        }
+
+        .step-hook {
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            width: 98%;
+            padding: 0 1rem;
+
+            .horizontal-line {
+                width: 50%;
+                height: 2px;
+                background-color: transparent;
+                border-width: 2px;
+                border-style: dashed;
+                border-color: #adadad;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                z-index: 0;
+                margin: auto -1rem;
+            }
+
+            .step-hook-body {
+                display: flex;
+                justify-content: space-between;
+                height: 70px;
+                position: relative;
+                padding: 0.8rem .5rem;
+                border-radius: .5rem;
+                text-align: center;
+                align-items: center;
+
+                .step-name {
+                    flex: 80%;
+                    font-size: .85rem;
+                    color: #fff;
+                }
+
+                .icon {
+                    flex: 20%;
+                    color: #fff;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+
+
+}
+
+.step-hook:hover+.step-down-box>.card-body-list,
+.step-hook:hover+.step-down-box div[class*="arrow"] {
+    display: block;
+}

@@ -1,0 +1,37 @@
+.duration-card {
+
+    &.card {
+        border: 1px solid #cdcdcd;
+    }
+
+    .card-body,
+    .card-header {
+        padding: 0 0.8rem;
+        text-align: center;
+    }
+
+    .card-header {
+        background-color: #ebedf3;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .label-container:last-child {
+        border-bottom: 0;
+    }
+
+    .label-container {
+
+        border-bottom: 1px solid #dcdcdc;
+        padding: .5rem 0;
+
+        h5 {
+            font-size: .8rem;
+            font-weight: bold;
+
+            small {
+                font-size: 90%;
+            }
+        }
+    }
+}

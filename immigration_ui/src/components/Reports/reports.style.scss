@@ -1,0 +1,23 @@
+@import "../../assets/scss/variables";
+
+.reports-info-container {
+
+    .custom-card{
+        height: 400px;
+        max-width: 100%
+    }
+
+    .btn-custom{
+         // only for IE8
+        height: 100px;
+        max-width: 100%
+    }
+
+    .frame-size-custom{
+        height: 100;
+        width: 100%
+    }
+
+}
+
+

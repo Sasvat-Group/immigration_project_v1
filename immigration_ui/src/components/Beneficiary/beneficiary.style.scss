@@ -1,0 +1,319 @@
+@import "../../assets/scss/variables";
+
+.beneficiary-info-container {
+
+    .tab-content .tab-pane {
+        padding: 10px 0;
+    }
+
+    .static-card {
+        .card-body {
+            padding: 10px;
+        }
+
+        .task-list-group {
+            // max-height: 400px;
+            overflow-y: auto;
+
+            .list-group-item {
+                border: none;
+            }
+        }
+    }
+
+    .tab-partition-left {
+        flex: .2;
+        width: 20%;
+        max-width: 20%;
+        border-right: 1px solid #dcdcdc;
+    }
+
+    .tab-partition-right {
+        max-width: 80%;
+        width: 80% !important;
+        flex: .8;
+
+        .priority-info-card {
+
+            .table-row {
+                overflow-x: auto;
+
+                table {
+
+                    td,
+                    th {
+                        font-size: .7rem;
+                    }
+
+                    th {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        .main-content-label {
+            border-bottom: 1px solid #dcdcdc;
+            padding-bottom: .6rem;
+            font-size: .9rem;
+        }
+    }
+
+    ol.progtrckr {
+
+        li {
+            display: inline-block;
+            text-align: center;
+            line-height: initial;
+
+            &.progtrckr-done {
+                width: auto;
+            }
+
+            &::before {
+                position: relative;
+                bottom: -90% !important;
+                float: left;
+                left: 50%;
+            }
+
+            span {
+                display: inline-block;
+                height: 3rem;
+            }
+        }
+    }
+
+    // Tab Tiles
+
+    .tab-tile-container {
+        display: grid;
+        grid-template-areas: "tile0 tile1 tile2 tile3 tile4"
+            "tile5 tile6 tile7 tile8 tile9"
+            "tile10 tile11 tile12 tile13 tile14"
+            "tile15 tile16 tile17 tile18 tile19";
+        grid-auto-rows: auto;
+        grid-auto-columns: 19%;
+        gap: .5rem;
+
+        .tab-tile {
+            width: 100%;
+            border-radius: .375rem;
+            overflow: hidden;
+            border: 2px solid transparent;
+            cursor: move;
+
+            .heading {
+                padding: .5rem .7rem;
+                background-color: #6259ca;
+                margin: 0;
+                color: #fff;
+                font-size: .72rem;
+                white-space: pre-line;
+            }
+
+            .body {
+                padding: .5rem .7rem;
+                background-color: #e5e5e5;
+            }
+        }
+
+        .tile0 {
+            grid-area: tile0;
+        }
+
+        .tile1 {
+            grid-area: tile1;
+        }
+
+        .tile2 {
+            grid-area: tile2;
+        }
+
+        .tile3 {
+            grid-area: tile3;
+        }
+
+        .tile4 {
+            grid-area: tile4;
+        }
+
+        .tile5 {
+            grid-area: tile5;
+        }
+
+        .tile6 {
+            grid-area: tile6;
+        }
+
+        .tile7 {
+            grid-area: tile7;
+        }
+
+        .tile8 {
+            grid-area: tile8;
+        }
+
+        .tile9 {
+            grid-area: tile9;
+        }
+
+
+        .tile10 {
+            grid-area: tile10;
+        }
+
+        .tile11 {
+            grid-area: tile11;
+        }
+
+        .tile12 {
+            grid-area: tile12;
+        }
+
+        .tile13 {
+            grid-area: tile13;
+        }
+
+        .tile14 {
+            grid-area: tile14;
+        }
+
+        .tile15 {
+            grid-area: tile15;
+        }
+
+        .tile16 {
+            grid-area: tile16;
+        }
+
+        .tile17 {
+            grid-area: tile17;
+        }
+
+        .tile18 {
+            grid-area: tile18;
+        }
+
+        .tile19 {
+            grid-area: tile19;
+        }
+
+        .tab-tile.dragging {
+            border: dashed gray 2px;
+        }
+    }
+
+    .x-tile {
+        border-left: 5px solid #19b159 !important;
+    }
+
+    .open-case-btn-group {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .btn {
+            width: 100%;
+            margin: .5rem;
+        }
+    }
+
+    .stepper-container {
+        .step-icon-bg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #dbdbdb;
+            color: #fff;
+            width: 2.2rem;
+            height: 2.2rem;
+            border-radius: 2.2rem;
+            opacity: .6;
+
+            &.active {
+                background-color: #6259ca;
+                color: #fff;
+                opacity: 1;
+            }
+        }
+    }
+
+    .timeline-stepper-container {
+
+        display: flex;
+
+        .step-fields {
+            align-self: flex-end;
+            margin-bottom: 1rem;
+            padding: .5rem;
+
+            h5 {
+                text-align: right;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+ul.stepper-list {
+    display: inline-block;
+    width: 100%;
+    margin-top: 2rem;
+    padding: .5rem;
+    list-style: none;
+
+    li {
+        display: block;
+        text-align: center;
+        font-size: .8rem;
+        margin-bottom: .375rem;
+        font-size: 1rem;
+
+        span {
+            margin-right: .375rem;
+        }
+    }
+
+    &.for-popover {
+        width: 250px;
+        background-color: #776cff;
+        color: #fff;
+        margin: 0;
+        padding: 1rem 1rem;
+
+        a {
+            color: #fff;
+        }
+    }
+
+}
+
+.tile-content {
+    border-left: 5px solid #8e86ff;
+    background-color: #ccc5;
+    padding: 1rem;
+    border-radius: 5px;
+
+    b.tile-value {
+        font-size: 0.75rem;
+    }
+}
+
+.h-185 .tile-content {
+    height: 185px;
+}
+
+.beneficiaryQuickAssessment {
+    .table {
+        thead {
+            th {
+                padding: 10px 10px;
+                letter-spacing: 0;
+            }
+        }
+    }
+}
